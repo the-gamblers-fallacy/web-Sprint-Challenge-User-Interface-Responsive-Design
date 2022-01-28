@@ -73,6 +73,44 @@ section, footer{
     margin: 0 auto;
 }
 
+/*Header Styles*/
+
+header {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2% 0 5% 0;
+}
+
+.logo {
+    width: 20%;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.8rem;
+}
+
+.jumbo {
+    width: 100%;
+}
+
 /*Top Section Styles*/
 
 .top-content {
@@ -90,9 +128,14 @@ section, footer{
     padding-bottom: 4%;  
 }
 
+.top-content .text-container h2 {
+    text-align: center;
+}
+
 /*Middle Section Styles*/
 .middle-content {
     margin-bottom: 4%;
+    border-bottom: 2px solid #ff4b00;
 }
 
 .middle-content h2 {
@@ -107,11 +150,53 @@ section, footer{
 
 .middle-content .boxes .box {
     background: black;
-    margin: 4% 0;
+    margin: 2% 1%;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 6%
+}
+
+#box1 {
+    background-color: teal;
+}
+
+#box2 {
+    background-color: gold;
+}
+
+#box3 {
+    background-color: cadetblue;
+}
+
+#box4 {
+    background-color: coral;
+}
+
+#box5 {
+    background-color: crimson;
+}
+
+#box6 {
+    background-color: forestgreen;
+}
+
+#box7 {
+    background-color: darkorchid;
+}
+
+#box8 {
+    background-color: hotpink;
+}
+
+#box9 {
+    background-color: indigo;
+}
+
+#box10 {
+    background-color: dodgerblue;
+    font-size: 1.4rem;
 }
 
 /*Bottom Section Styles*/
@@ -124,6 +209,10 @@ section, footer{
     width:25%;
 }
 
+.bottom-content .text-container h2 {
+    margin-bottom: 20%;
+}
+
 .bottom-content .text-container:last-child {
     padding-right: 0;
 }
@@ -134,7 +223,154 @@ footer {
     background-color: #ff4b00;
 }
 
+footer nav {
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+}
+
+footer nav a {
+    color: white;
+}
+
 /*About Page Styles*/
 
+.about-top-content p {
+    font-size: 2.0rem;
+}
+
+.about-middle-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    border: none;
+    padding-bottom: 0;
+}
+
+.middle-item {
+    width: 40%;
+    margin: 2% 0;
+    padding-bottom: 2%;
+    border-bottom: 2px solid #ff4b00;
+}
+
+.middle-item p {
+    text-align: justify;
+}
+
+.middle-item img {
+    width: 100%;
+}
+
+.about-bottom-content {
+    padding-top: 0;
+}
+
+.about-bottom-content p {
+    font-size: 2.0rem;
+    text-align: justify;
+}
 
 /*Responsive Styles*/
+
+/* 
+    Note: my queries are going to be at 600px (directions say 500) because it's just a little too small for me,
+    the code should still work the same and I can change it to 500 if need be
+*/
+@media (max-width: 600px) {
+    /* home page styling */
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .nav-bar {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .logo {
+        width: 50%;
+        margin: 0 auto;
+        padding: 2% 0;
+    }
+
+    /* top content*/
+    .top-content {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .top-content .text-container {
+        width: 100%; 
+    }
+
+    /* middle content */
+    .middle-content .boxes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .middle-content .boxes .box {
+        background: black;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 19%
+    }
+
+    
+    /* bottom content */
+    .bottom-content {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .bottom-content .text-container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .bottom-content .text-container h2 {
+        margin-bottom: 0;
+    }
+
+    .bottom-content .text-container p {
+        margin-bottom: 5%;
+        font-size: 2.0rem;
+        text-align: justify;
+    }
+    
+    /* footer content */
+    footer nav {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    footer nav a {
+        padding: 2% 0;
+    }
+
+    /* about page styling */
+    .about-middle-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .middle-item {
+        width: 100%;
+    }
+
+    .middle-item p {
+        text-align: justify;
+        font-size: 2.0rem;
+    }
+}
